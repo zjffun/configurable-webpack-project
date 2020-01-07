@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>{{title}}</h1>
+    <h1><i class="cwp-logo"></i> {{title}}</h1>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -30,5 +30,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.cwp-logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    
+    background: url(./assets/icons/logo.png) center/cover;
 }
 </style>

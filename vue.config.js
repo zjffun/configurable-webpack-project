@@ -14,5 +14,20 @@ module.exports = {
         template: "index.html"
       })
     ]
+  },
+  chainWebpack: config => {
+    const imagesRule = config.module.rule("images");
+
+    // clear all existing loaders.
+    // if you don't do this, the loader below will be appended to
+    // existing loaders of the rule.
+    imagesRule.uses.clear();
+
+    imagesRule
+      .use("file-loader")
+      .loader("file-loader")
+      .options({
+        name: "[path][name].[ext]"
+      });
   }
 };
